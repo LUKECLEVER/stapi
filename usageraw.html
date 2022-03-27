@@ -1,0 +1,7 @@
+fetch('https://v1.hitokoto.cn/?encode=text')
+  .then(response => response.text())
+  .then(data => {
+    const hitokoto = document.getElementById('hitokoto')
+    hitokoto.innerText = data
+  })
+  .catch(console.error)
